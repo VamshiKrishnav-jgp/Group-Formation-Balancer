@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:8080/api";
-
+const API =const API_URL = "https://group-formation-balancer-backend.onrender.com/api";
 function App() {
   const [students, setStudents] = useState([]);
   const [projects, setProjects] = useState([]);
