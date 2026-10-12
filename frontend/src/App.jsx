@@ -110,7 +110,10 @@ function App() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to add student");
+  const errorText = await response.text();
+  console.error("Backend error:", response.status, errorText);
+  throw new Error(`HTTP ${response.status}: ${errorText}`);
+}
       }
 
       setStudentForm({
