@@ -8,7 +8,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://group-formation-balancer.onrender.com"
+})
 public class StudentController {
 
     private final StudentRepository studentRepository;
